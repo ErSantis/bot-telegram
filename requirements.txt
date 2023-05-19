@@ -3,3 +3,4 @@ aioredis
 pyTelegramBotAPI
 kaleidoscope
 plotly
+sympy
