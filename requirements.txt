@@ -1,2 +1,5 @@
 aiohttp
 aioredis
+pyTelegramBotAPI
+kaleidoscope
+plotly
