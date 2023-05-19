@@ -1,5 +1,4 @@
 .DS_STORE
-tgbot/out
 tgbot/__pycache__
 tgbot/commands/__pycache__
 tgbot/handlers/__pycache__
