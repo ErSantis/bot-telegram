@@ -13,7 +13,7 @@ def stars_allcons(message: Message, bot: TeleBot):
     
     stars = read_stars()
     r = read_constellations()
-    image1 = grafico_constelaciones(stars,r)
+    image1 = 'bot-telegram/tgbot/out/stcons.png'
     bot.send_photo(message.chat.id, open(image1, 'rb'))
 
     bot.send_message(
@@ -23,7 +23,7 @@ def stars_allcons(message: Message, bot: TeleBot):
     
     for i, constelacion in enumerate(r):
         bot.send_message(message.chat.id,f'{constelacion}')
-        image2 = f'tgbot\out\cons{i}.png'
+        image2 = f'bot-telegram/tgbot/out/cons{i}.png'
         bot.send_photo(message.chat.id, open(image2, 'rb'))
  
     
