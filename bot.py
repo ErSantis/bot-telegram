@@ -58,7 +58,7 @@ bot.add_custom_filter(AdminFilter())
 
 def run():
     print('Bot is running...')
-    bot.polling()
+    bot.infinity_polling()
 
 
 run()
