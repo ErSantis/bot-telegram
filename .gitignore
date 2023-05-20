@@ -2,3 +2,5 @@
 tgbot/__pycache__
 tgbot/commands/__pycache__
 tgbot/handlers/__pycache__
+tgbot/middlewares/__pycache__
+tgbot/utils/__pycache__
