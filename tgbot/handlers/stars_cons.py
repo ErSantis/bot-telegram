@@ -37,6 +37,7 @@ def stars_cons(message: Message, bot: TeleBot):
     res = ''
     for i, constelacion in enumerate(r):
         res += f'{i}.{constelacion}\n'
+    print(res) 
     bot.send_message(message.chat.id,f'Las constelaciones disponibles son:\n{res}')
     # Registrar un manejador para el siguiente mensaje del usuario
     bot.register_next_step_handler(message, send_image, bot, r)
