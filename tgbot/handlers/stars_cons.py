@@ -14,8 +14,8 @@ def send_image(message: Message, bot: TeleBot,r):
                 return
         # Hacer algo con el valor, por ejemplo, enviar una respuesta al usuario
         stars = read_stars()
-        image1 = f'bot-telegram/tgbot/out/stcons{conste}.png'
-        image2 = f'bot-telegram/tgbot/out/cons{conste}.png'
+        image1 = f'tgbot/out/stcons{conste}.png'
+        image2 = f'tgbot/out/cons{conste}.png'
         # enviamos la imagen, teniendo en cuenta que es un archivo local
        
         bot.send_message(message.chat.id,f'Grafico de la constelacion {list(r.keys())[int(conste)]}')
