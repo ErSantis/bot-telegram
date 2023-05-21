@@ -56,13 +56,11 @@ def grafico_constelaciones(stars, constellations):
     for constellation in constellations.values():
         df = pd.concat([df, get_constellation_df(stars, constellation)])
 
-    # Se crea una figura
-    # fig = px.scatter(df, x='x', y='y', hover_data=[
-    #     'Henry Draper', 'magnitud', 'Harvard Revised', 'nombre'], color='magnitud', color_continuous_scale='viridis')
 
-	# make the dots white
+	# Make the dots white
     fig = px.scatter(stars, x='x', y='y', hover_data=[
     'Henry Draper', 'magnitud', 'Harvard Revised', 'nombre'], color_discrete_sequence=['rgba(255, 255, 255, 0.5)'])
+    
     # Personalizar el gráfico
     offset = 2
     fig.update_traces(textposition='top center')

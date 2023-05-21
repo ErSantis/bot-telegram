@@ -17,7 +17,7 @@ def read_stars():
 				# Crear una lista de nombres separados por ";"
 				# seleccionar de la columna 7 en adelante
 				name = ' '.join(columns[6:])
-				# quitar los saltos de linea
+				# Quitar los saltos de linea
 				name = name.replace('\n', '')
 				# separar los nombres por ";"
 				name = name.split(';')
@@ -35,19 +35,7 @@ def read_stars():
 	# eliminar la columna z
 	stars = stars.drop(columns=['z'])
 
-	# print('Se ha leido el archivo stars.txt')
-	# print('El dataframe tiene', len(stars),
-	#       'filas y', len(stars.columns), 'columnas')
-	# print('Las columnas son:', stars.columns)
-	# print('Los primeros 5 registros son:')
-	# print(stars.head())
-
-	# Se retorna el dataframe
 	return stars
-
-# print(read_stars())
-
-# Funcion para leer los archivos de las constelaciones
 
 
 def read_constellations():
@@ -75,25 +63,15 @@ def read_constellations():
 		# Se guarda la lista de estrellas en el diccionario
 		constellations[file] = estrellas
 
-	# print('Se han leido los archivos de las constelaciones')
-	# print('El diccionario tiene', len(constellations), 'constelaciones')
-	# print('Las constelaciones son:', constellations.keys())
-	# print(constellations)
-
 	# Se retorna el diccionario
 	return constellations
 
-# print(read_constellations())
+
 
 # Funcion para mostrar un grafico con todas las estrellas
-
-
 def grafico_estrellas(stars):
 
 	# Se crea una figura
-	# fig = px.scatter(stars, x='x', y='y', hover_data=[
-	#  'Henry Draper', 'magnitud', 'Harvard Revised', 'nombre'])
-	# Asignar colores por magnitud
 	fig = px.scatter(stars, x='x', y='y', hover_data=[
             'Henry Draper', 'magnitud', 'Harvard Revised', 'nombre'], color='magnitud', color_continuous_scale='viridis')
 
@@ -125,9 +103,7 @@ def grafico_estrellas(stars):
             template='plotly_dark'
 
 	)
-	# Se muestra la figura
-	# fig.show()
-	# Se guarda la figura
+	#Se guarda la imagen y se retorna la ruta donde se guarda.
 	output_file = 'tgbot/out/estrellas.png'
 	fig.write_image(output_file, width=1000, height=1000)
 	return output_file
